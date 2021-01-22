@@ -402,7 +402,6 @@ header img {
 }
 
 .gnav-menu-item {
-
 }
 
 .gnav-menu-item  a {
@@ -486,9 +485,10 @@ header h1 {
 
 .feature-text {
   width: 55%;
-  font-size:24px;
+  font-size:20px;
   color:#000051;
   margin: 0 24px;
+  word-break: break-all;
 }
 
 .feature-text h3 {
@@ -643,4 +643,151 @@ footer .telNo{
 
 footer .copyright {
   font-size: 18px;
+}
+
+/* スマホ対応 */
+@media screen and (max-width: 768px){
+  /*スマホ用のcssを記述*/
+    header img {
+      width: 100vw;
+      height: 100%;
+    }
+
+    .gnav-area .gnav-menu {
+      flex-wrap: wrap;
+      width: 100%;
+      height: 80px;
+    }
+
+    .gnav-area .gnav-menu .gnav-menu-item {
+      flex: auto;
+      width: 33.33333333%;
+    }
+
+    .gnav-menu {
+      font-size: 16px;
+      text-align: center;
+    }
+
+    .gnav-area .gnav-menu .gnav-menu-item:nth-child(3n) a {
+      border-right: 1px solid #8cabb8;
+    }
+
+    .gnav-area .gnav-menu .gnav-menu-item:nth-child(n + 4) a {
+      border-top: none;
+    }
+
+    header h1 {
+      font-size: 34px;
+      top: 35%;
+      left: 3%;
+    }
+
+    .btn-gradient-radius {
+      top: 68%;
+      width: 200px;
+      height: 50px;
+      padding: 4px 8px;
+      border-radius: 25px;
+      font-size: 18px;
+    }
+
+    .container{
+      width: 100%;
+    }
+
+    .section-title {
+      font-size: 34px;
+      padding: 16px;
+      margin:8px;
+    }
+
+    .section-title span {
+      padding:8px;
+    }
+
+    .section-subtitle {
+      font-size: 20px;
+    }
+
+    .feature-contents {
+      display: block;
+    }
+
+    .feature-text {
+      width: 80%;
+      font-size:12px;
+      margin:0 30px;
+    }
+
+    .feature-text h3 {
+      font-size:16px;
+    }
+
+    .feature-photo {
+      width: 75%;
+      height: 75%;
+      margin: 30px;
+    }
+
+    #stepFlow {
+      width: 100%;
+      height: 100%;
+      margin:0;
+    }
+
+    .subContainer {
+      padding: 5px 0;
+      background-color: #a0c2cd;
+    }
+
+    .flow > li {
+      position: relative;
+      font-size: 18px;
+      padding:0 16px;
+    }
+    .flow > li:not(:last-child) {
+      margin-bottom: 20px;
+    }
+    .flow > li:not(:first-child)::before {
+      left: calc(10% + 50px - 2px);
+    }
+    .flow > li dl {
+      background-color: #fff;
+    }
+    .flow > li dl dt {
+      margin-right: 12vw;
+      text-align: center;
+    }
+    .flow-text {
+      font-size: 16px;
+    }
+
+    #question h3 {
+      background-color: #faebd7;
+      font-size: 20px;
+      padding: 24px 16px;
+    }
+
+    #question p {
+      font-size: 16px;
+      padding: 0 16px;
+    }
+
+    #map {
+      width: 100%;
+      height:400px;
+    }
+
+    footer .lesson-text {
+      font-size: 17px;
+    }
+
+    footer .telNo{
+      font-size: 40px;
+    }
+
+    footer .copyright {
+      font-size: 16px;
+    }
 }
