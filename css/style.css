@@ -377,9 +377,14 @@ header {
   position: relative;
 }
 
+.img-wrap {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
 header img {
   width: 100vw;
-  height: 100vh;
 }
 
 .gnav-area {
@@ -412,7 +417,6 @@ header img {
 .gnav-menu-item a:hover {
   color: #c3c3c3;
 }
-
 
 header h1 {
   font-size: 80px;
@@ -481,6 +485,10 @@ header h1 {
 
 .feature-contents {
   display: flex;
+}
+
+.feature-contents2 {
+  flex-direction: row-reverse;
 }
 
 .feature-text {
@@ -645,12 +653,35 @@ footer .copyright {
   font-size: 18px;
 }
 
+/* tablet  */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  /*tablet用cssを記述*/
+  .img-wrap {
+    width: auto;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .gnav-menu {
+    font-size: 24px;
+  }
+
+  header h1 {
+    font-size: 64px;
+    right: 0;
+    margin: auto;
+    left: 0;
+  }
+
+}
+
 /* スマホ対応 */
-@media screen and (max-width: 768px){
+@media screen and (max-width: 767px){
   /*スマホ用のcssを記述*/
-    header img {
-      width: 100vw;
-      height: 100%;
+    .img-wrap {
+      width: 100%;
+      height: auto;
+      overflow: hidden;
     }
 
     .gnav-area .gnav-menu {
@@ -669,22 +700,20 @@ footer .copyright {
       text-align: center;
     }
 
-    .gnav-area .gnav-menu .gnav-menu-item:nth-child(3n) a {
-      border-right: 1px solid #8cabb8;
-    }
-
     .gnav-area .gnav-menu .gnav-menu-item:nth-child(n + 4) a {
       border-top: none;
     }
 
     header h1 {
-      font-size: 34px;
-      top: 35%;
-      left: 3%;
+      font-size: 28px;
+      top: 45%;
+      right: 0;
+      margin: auto;
+      left: 0;
     }
 
     .btn-gradient-radius {
-      top: 68%;
+      top: 70%;
       width: 200px;
       height: 50px;
       padding: 4px 8px;
@@ -716,7 +745,7 @@ footer .copyright {
 
     .feature-text {
       width: 80%;
-      font-size:12px;
+      font-size:14px;
       margin:0 30px;
     }
 
