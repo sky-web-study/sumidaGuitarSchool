@@ -427,6 +427,9 @@ header h1 {
   color: #fff;
   font-weight: bold;
   text-shadow: 4px 3px 0px #778899;
+  right: 0;
+  margin: auto;
+  left: 0;
 }
 
 .btn-gradient-radius {
@@ -741,12 +744,14 @@ footer .copyright {
 
     .feature-contents {
       display: block;
+      text-align: center;
     }
 
     .feature-text {
-      width: 80%;
+      width: 100%;
       font-size:14px;
-      margin:0 30px;
+      text-align: left;
+      padding: 0 30px;
     }
 
     .feature-text h3 {
